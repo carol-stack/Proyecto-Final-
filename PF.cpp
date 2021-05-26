@@ -89,7 +89,7 @@ int main(){
             }
         }
         porcentaje=(contador*100)/20;
-        cout<<"EL porcentaje de ocupación del barco ahora es del "<<porcentaje<<"%"<<endl;
+        cout<<"EL porcentaje de ocupaciÃ³n del barco ahora es del "<<porcentaje<<"%"<<endl;
 
         int acumulador=0;
         for(int i=0;i<filas;i++){
@@ -412,7 +412,7 @@ int MarcaMasPeso(int peso[filas][columnas],string marca[filas][columnas]){
 
 //12
 int MarcaMenosPeso(int peso[filas][columnas],string marca[filas][columnas]){
-    int menor=0;
+    int n=INT_MAX;
     string empresa="";
     for(int i=0;i<filas;i++){
         for(int j=0;j<columnas;j++){
