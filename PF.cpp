@@ -416,7 +416,7 @@ int MarcaMenosPeso(int peso[filas][columnas],string marca[filas][columnas]){
     string empresa="";
     for(int i=0;i<filas;i++){
         for(int j=0;j<columnas;j++){
-            if(peso[i][j]<menor){
+            if(peso[i][j]!=0 && peso[i][j]<menor){
                 menor=peso[i][j];
                 empresa=marca[i][j];
             }
