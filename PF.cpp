@@ -122,7 +122,11 @@ void limpiezaMatrices(bool disponibilidad[filas][columnas],int peso[filas][colum
 		for (int j=0;j<columnas;j++){
 			disponibilidad[i][j]=1;
 			peso[i][j]=0;
-			precio[i][j]=0;
+			if(i==0 && j<5 || i==3 && j<5 || j==0 && i<4 || j==4 && i<4){
+				precio[i][j]=100;
+			}else{
+				precio[i][j]=300;
+			}
 		}
 	}
 }
@@ -416,12 +420,12 @@ int MarcaMenosPeso(int peso[filas][columnas],string marca[filas][columnas]){
     string empresa="";
     for(int i=0;i<filas;i++){
         for(int j=0;j<columnas;j++){
-            if(peso[i][j]!=0 && peso[i][j]<menor){
-                menor=peso[i][j];
+            if(peso[i][j]!=0 && peso[i][j]<n){
+                n=peso[i][j];
                 empresa=marca[i][j];
             }
         }
     }
-    cout<<"La empresa "<<empresa<<" tiene el contenedor menos pesado con "<<menor<<" toneladas"<<endl;
-    return menor;
+    cout<<"La empresa "<<empresa<<" tiene el contenedor menos pesado con "<<n<<" toneladas"<<endl;
+    return n;
 }
